@@ -1,0 +1,34 @@
+import org.openapitools.client.*;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.model.*;
+import org.openapitools.client.api.DefaultApi;
+
+import java.io.File;
+import java.util.*;
+
+public class DefaultApiExample {
+    public static void main(String[] args) {
+
+        // Create an instance of the API class
+        DefaultApi apiInstance = new DefaultApi();
+        Integer limit = 56; // Integer | The numbers of items to return.
+        Integer page = 56; // Integer | If pagination is available, send the number of page you wish to fetch.
+        Integer yearFrom = 56; // Integer | The start year from which results will be filtered.  The data results are inclusive of the given year (e.g. 2010 would result in data from and including 2010 up until the latest year, or the year specified in yearTo).
+        Integer yearTo = 56; // Integer | The end year up to which results will be filtered.  The data results are inclusive of the given year (e.g. 2015 would result in data up to and including 2015 back through the available data, or the year specified in yearFrom).
+        array[Integer] year = ; // array[Integer] | Send array of years.
+        Boolean download = true; // Boolean | Get the result as a CSV file.
+        String coo = coo_example; // String | Filter the data to one or more countries of origin.  The countries are specified using the three character country codes (e,g, AFG for Afghanistan).  Use a comma separated list to filter to multiple countries (e.g. “AFG,PAK”) or use the array notation e.g. “coo[]=AFG&coo[]=PAK”. By default, UNHCR’s country codes are used.  To use three character ISO codes instead, see the cfType parameter.  See the lookup between UNHCR and ISO3 country codes, including also the regions. If not specified, data for this dimension will be summed and aggregated to one row.
+        String coa = coa_example; // String | Filter the data to one or more countries of asylum.  The countries are specified using the three character country codes (e,g, AFG for Afghanistan).  Use a comma separated list to filter to multiple countries (e.g. “AFG,PAK”) or use the array notation e.g. “coo[]=AFG&coo[]=PAK”. By default, UNHCR’s country codes are used.  To use three character ISO codes instead, see the cfType parameter.  See the lookup between UNHCR and ISO3 country codes, including also the regions. If not specified, data for this dimension will be summed and aggregated to one row.
+        Boolean cooAll = true; // Boolean | Automatically includes all countries of origin in the response if set to “true”.  If set, this overrides the specific selection of countries provided to CoO.
+        Boolean coaAll = true; // Boolean | Automatically includes all countries of asylum in the response if set to “true”.  If set, this overrides the specific selection of countries provided to CoA.
+        String cfType = cfType_example; // String | If set to “ISO” will cause the searches by origin and asylum to use the ISO3 codes.  See the summary lookup table between UNHCR and ISO codes.
+
+        try {
+            PopulationPagination result = apiInstance.population(limit, page, yearFrom, yearTo, year, download, coo, coa, cooAll, coaAll, cfType);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling DefaultApi#population");
+            e.printStackTrace();
+        }
+    }
+}

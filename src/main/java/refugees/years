@@ -1,0 +1,25 @@
+import org.openapitools.client.*;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.model.*;
+import org.openapitools.client.api.DefaultApi;
+
+import java.io.File;
+import java.util.*;
+
+public class DefaultApiExample {
+    public static void main(String[] args) {
+
+        // Create an instance of the API class
+        DefaultApi apiInstance = new DefaultApi();
+        Integer limit = 56; // Integer | The numbers of items to return.
+        Integer page = 56; // Integer | If pagination is available, send the number of page you wish to fetch.
+
+        try {
+            YearPagination result = apiInstance.years(limit, page);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling DefaultApi#years");
+            e.printStackTrace();
+        }
+    }
+}

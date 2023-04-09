@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Refugees</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.css" integrity="sha384-DkiW/Hs8ovXJg74lNtIvEqLizQObt0GZLGhOZwvqsNpWY0f9nIu+7P5JvGNdVfC+" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha384-H1s7aT6DpKScygo+6gr3U6yxzU6lsPXUdZz/KQatGXByb7A1QxSSty8OhPjgsfzV" crossorigin="">
+    <head>
+      
+      <title>Interactive Map</title>
+      <!-- Link to Leaflet CSS -->
+      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    
+      <!-- Link to Leaflet JS -->
+      <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    
+      <!-- Your other HTML code goes here -->
+    </head>
+
+    
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+
+    main {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: flex-start;
+      padding: 20px;
+    }
+
+    .map-section {
+      flex: 1;
+      min-width: 400px;
+      height: 400px;
+      margin: 10px;
+    }
+
+    .info-section {
+      flex: 1;
+      min-width: 400px;
+      margin: 10px;
+    }
+
+    .links-section {
+      flex: 1;
+      min-width: 400px;
+      margin: 10px;
+    }
+
+    .menu {
+      position: fixed;
+      top: 0;
+      right: 0;
+      padding: 10px;
+      background-color: #eee;
+      border: 1px solid #ccc;
+    }
+
+    .menu ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .menu li {
+      margin: 5px 0;
+    }
+
+    .menu a {
+      color: #333;
+      text-decoration: none;
+    }
+
+    .menu a:hover {
+      text-decoration: underline;
+    }
+
+  </style>
+</head> 
+<div class="topnav">  <a class="active" href="#home">Home</a>  <a href="#news">News</a>  <a href="#contact">Contact</a>  <a href="#about">About</a></div>
+<script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js" integrity="sha384-sGca9NPHxNjrPfOr5pANejBWT5/5KM5I5ekLybJALQlruHdx9t1iKt39vJtP2a8+" crossorigin="anonymous"></script>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Interactive Map</title>
+    <link rel="stylesheet" href="leaflet.css">
+  </head>
+  <body>
+    <div id="map"></div>
+    <script src="leaflet.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
+<body>
+ 
+</body>
+<body>
+  <header>
+    <h1>Refugees</h1>
+    <button id="myButton">Type of Visual</button>
+<select id="myDropdown">
+  <option value="item1">Map</option>
+  <option value="item2">Graph</option>
+</select>
+<button id="myButton">Show dropdown</button>
+<select id="myDropdown">
+    <option value="https://www.rescue.org/">International Rescue Committee</option>
+    <option value="https://www.lirs.org/">Lutheran International and Refugee Service</option>
+    <option value="https://www.doctorswithoutborders.org/">Doctors Without Border</option>
+</select>
+</select>
+
+
+  </header>
+  <main>
+    
+    <section class="map-section">
+      <h2>Map</h2>
+      <div id="mapid"></div>
+    </section>
+    <section class="info-section">
+      <h2>Refugee Information</h2>
+      <p>Display information about the number of refugees and their countries of origin.</p>
+    </section>
+    <section class="links-section">
+      <h2 class="my-header">Help &amp; Resources</h2>
+      <p> Advocacy Orders</p>
+      <p> Volunteer Opportunities</p>
+
+      <ul>
+        <li><a href="https://www.rescue.org/volunteer">International Rescue Committee</a></li>
+      </ul>
+      <h3>Personal Stories of Refugees</h3>
+      <h4>Jakey's Story: The fear of being taken by armed groups</h4>
+      <p>
+        Jakey was 12 years old when he fled Afghanistan. Traveling by foot, he spent a year moving across Afghanistan into Pakistan, then Iran, Turkey and Bulgaria, until finally settling in Serbia.
+        
+        Recalling his difficult journey, Jakey said, "When I first arrived I was scared and tired. I didn’t have anybody." 
+        
+        Jakey's five brothers and two sisters remained in Afghanistan. "It's a really difficult situation [in Afghanistan] for boys that are 15 or 16," he said. "They [armed groups] can just come and say you need to be a soldier. If you say no, they can kill you."
+        
+        At the temporary refugee settlement where he was staying with other unaccompanied minors, Save the Children provided Jakey with assistance. "Now I know some people here," said Jakey, referring to, among others, Amila*, his Save the Children legal guardian. 
+        
+        "In the future, I would like to study English," he said.
+      </p>
+      <h4>Azar's Story: "You need to help these people."</h4>  
+      <p>
+        Azar wore plastic sandals on his otherwise bare feet. It was so cold outside, that the puddles surrounding the leaking tents where 14-year old Azar and other Afghan refugees slept had frozen over. 
+
+        Despite the dire conditions at the refugee camp in Croatia where Azar had been living, he remembered the mountainous journey as being even more dangerous. "Fear is constant in the mountains," he said. "There were also wolves. That’s the scary part."
+        
+        Azar's journey to get from Afghanistan to his leaking tent in Croatia had not been easy. Following a failed first attempt, Azar traveled through the mountains on foot to go from Afghanistan to Iran, from Iran to Turkey and from Turkey to Greece. After that, he traveled to Serbia, then Bosnia and finally to Croatia. 
+        
+        "I feel bad in my heart," Azar said when discussing the other Afghan refugees he met all along the way and at the camp where he lives. "My only request is that you need to help these people. I don’t have any other demands.”
+<body>
+  <h4>Ferhana’s Story: Dreaming of going to bed without being hungry</h4>  
+  <p>
+    At ten-years old, Ferhana was living in a tent settlement in Balkh, Afghanistan after her family was displaced by conflict. When COVID hit, Ferhana's parents struggled to find work and afford food. The entire family, including Ferhana's four siblings, survived off tea and bread.
+
+    While Ferhana's father would sell things he found to buy biscuits for the family, on the days he didn't find anything, the family went hungry. For five months, the family was unable to buy a single piece of meat, vegetable or fruit.
+    
+    As COVID continued to spread across Afghanistan, Ferhana grew more scared. 
+    
+    With the help of Save the Children, the family was able to buy goats. Not only could they begin to eat fresh dairy products again, Ferhana's father began making plans to sell more dairy to a local farm and generate a sustainable income for the family once again. 
+    
+    Ferhana used to dream of the day she could fall asleep without being hungry. Now, she thinks about how she wants to become a teacher when she grows up - and help make her student's dreams come true. 
+  </p>
+</body>
+      
+    </section>
+  </main>
+    <div id="word-cloud"></div>
+    <p> *Refugee stories taken from savethechildren.org</p>
+  <body>
+    
+    
+  </body>
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha384-a8FIvqDh9X1lT6T2gWxRv6UmgpZU4u
